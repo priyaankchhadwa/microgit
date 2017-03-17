@@ -1,0 +1,12 @@
+	lru
+	first fit
+	sjf
+	fcfs
+	bankers
+	worst fit
+	priority
+	best fit
+round-robin
+	fifo page
+	fcfs disk
+	sstf

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- Raleway font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300, 400" rel="stylesheet">
+
+	
+	
+	<title>Welcome to &mu;Git</title>
+	<style>
+	
+		* {
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: "Segoe UI";
+			background-color: #efefef;
+		}
+		
+		.navbar {
+			font-size: 15px;
+			line-height: 20px
+		}
+
+		ul a {
+			color: #313131;
+			text-decoration: none;
+			font-size: 20px;
+		}
+		
+		a:hover {
+				color: black;
+				text-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
+				text-decoration: none;
+			}
+		
+		.btn-success {
+			background-image: linear-gradient(#79d858, #569e3d);
+			border-color: 1px solid #4a993e;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+			padding-top: 5px;
+			font-size: 20px;
+		}
+		
+		.btn-success:hover {
+			background-image: linear-gradient(#6cc14f, #4c8b36);
+			border-color: 1px solid #4a993e;
+		}
+		
+		.btn-success:active {
+			background-image: linear-gradient(#5fb244, #3f782b);
+			text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.5);
+		}
+		
+		.btn-nav {
+			text-shadow: none;
+			margin-right: 10px;
+		}
+		
+		.navbar-nav > li > a {
+			padding-top: 10px;
+			padding-bottom: 15px;
+			line-height: 25px;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		
+		.navbar-fixed-top {
+			min-height: 80px;
+		}
+		
+		@media (max-width: 1000px) {
+			.navbar-nav > li > a {
+				margin: 0px;
+    			line-height: 0px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				font-size: 20px;
+			}
+		}
+		
+		.asdf-img {
+			background-image: url("bokeh.jpg");			
+			background-size: 100%;
+			position: relative;
+			background-repeat: space;
+			margin-right: -25px;
+			margin-left: -25px;
+			overflow: hidden;
+			padding-left: 50px;
+			padding-bottom: 50px;
+			padding-top: 50px;
+		}
+		
+		.navbar .brand { 
+			max-height: 40px;
+			max-width: 30%; 
+			overflow: visible;
+			padding-top: 0;
+			padding-bottom: 0;
+			background-color: white;
+		}
+				
+		.bar1, .bar2, .bar3 {
+			width: 30px;
+			height: 3px;
+			background-color: black;
+			margin: 5px 0;
+			transition: 0.5s;
+		}
+		
+		.change .bar1 {
+			-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+			transform: rotate(-50deg) translate(-8px,3px) ;
+		}
+
+		.change .bar2 {opacity: 0; transition: 0.2s}
+
+		.change .bar3 {
+			-webkit-transform: rotate(45deg) translate(-7px, -5px) ;
+			transform: rotate(50deg) translate(-7px, -5px) ;
+		}
+		
+		.intro-text {
+			left: 50%;
+			width: 50%;
+			margin: 10px auto;
+			margin-top: 0px;
+			font-size: 25px;
+			color: white;
+			font-family: 'Raleway', sans-serif;
+			text-shadow: 0 0 10px rgba(0, 0, 0,0.7), 1px 1px 20px rgba(0, 0, 0,0.6);
+			word-wrap: break-word;
+			margin-bottom: auto;
+		}
+		
+		.intro-form {
+			margin-top: 0;
+			margin: auto;
+			font-size: 25px;
+			width: 350px;
+		}
+		
+		.form-control {
+			width: 350px;
+			padding: 20px 12px;
+			border-color: #d4d4d4;
+		}
+		
+		.tile-block {
+			border-top: 1px solid #e5e5e5;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		
+		@media (min-width: 900px)
+			.tile-row {
+				display: table;
+				max-width: 1330px;
+				margin: 0 auto;
+				overflow: hidden;
+		}
+		
+		.tile.one-fourth {
+			float: left;
+			width: 25%;
+		}
+		
+		@media (max-width: 850px){
+			.asdf-img {
+				height: 100%;
+				background-repeat: round;
+			}
+			
+			.navbar-right > li {
+				float: left;
+				margin-left: 20px;
+				margin-bottom: 15px;
+			}
+			
+			.intro-text {
+				width: 70%
+			}
+		}
+		
+		@media (max-width: 768px){
+			.tile.one-fourth {
+				float: left;
+				width: 50%;
+			}	
+		}
+		
+		
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top" role="banner" style="background-color: white;">
+	<br>
+	<div class="container-fluid">
+   		<div class="navbar-header">
+   		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="myFunction(this)" style="margin-top: 0">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div> 
+			</button>
+			<a class="navbar-brand" href="home.html" style="margin-top: -30px;"><img src="logo.png" width="70"></a>
+   		</div>
+   		<div class="collapse navbar-collapse" id="myNavbar" style="margin-left: 50px;">
+			<ul class="nav navbar-nav">
+				<li><a href="terms.html">Terms</a></li>
+				<li><a href="security.html">Security</a></li>
+				<li><a href="contact.php">About</a></li>
+				<li><a href="contact.php">Contact</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><button class="btn btn-default btn-nav"><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up </a></button></li>
+				<li><button class="btn btn-success btn-nav"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Sign in </a></button></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid clearfix container-responsive" style="overflow: hidden; margin-top: 80px">	
+	<div class="asdf-img">
+		<div class="intro-text">
+			<h1 style="font-weight: 400; text-align: center;">Welcome to &mu;Git</h1>
+			<p style="font-weight: 300; text-align: center;">Millions will use &mu;Git to develop and build personal projects and work on open-source technologies</p>
+		</div>
+		<div class="intro-form">
+			<form method="post" action="login.html">
+				<div class="form-group">
+					<input type="submit" class="btn btn-success" value="Sign up for &mu;Git" style="width: 100%; border:1px solid #4a993e">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="intro-desc">
+	<div class="container-responsive">
+		<h2 class="text-center" style="font-family:'Raleway'; font-weight: 400; margin-top: 30px">Welcome home, developers</h2>
+    	<p class="text-center">&mu;Git fosters a fast, flexible, and collaborative development process that lets you work on your own or with others.</p>
+	</div>
+	<div class="tile-block">
+		<div class="tile-row">
+			<div class="tile one-fourth text-center">
+        <img src="https://assets-cdn.github.com/images/modules/site/home-ill-build.png?sn" alt="" class="img-responsive featurette-illo-sm mb-4 mt-4">
+        <h4 class="alt-h4">For everything you build</h4>
+        <p class="alt-text-small text-gray">Host and manage your code on &mu;Git. You can keep your work private or share it with the world.</p>
+      </div>
+			<div class="tile one-fourth text-center">
+        <img src="https://assets-cdn.github.com/images/modules/site/home-ill-work.png?sn" alt="" class="img-responsive featurette-illo-sm mb-4 mt-4">
+        <h4 class="alt-h4">A better way to work</h4>
+        <p class="alt-text-small text-gray">From hobbyists to professionals, &mu;Git helps developers simplify the way they build software.</p>
+      </div>
+			<div class="tile  one-fourth text-center">
+        <img src="https://assets-cdn.github.com/images/modules/site/home-ill-projects.png?sn" alt="" class="img-responsive featurette-illo-sm mb-4 mt-4">
+        <h4 class="alt-h4">Millions of projects</h4>
+        <p class="alt-text-small text-gray">&mu;GitHub will be a home to millions of open source projects. Try one out soon or get inspired to create your own.</p>
+      </div>
+			<div class="tile  one-fourth text-center">
+        <img src="https://assets-cdn.github.com/images/modules/site/home-ill-platform.png?sn" alt="" class="img-responsive featurette-illo-sm mb-4 mt-4">
+        <h4 class="alt-h4">One platform, from start to finish</h4>
+        <p class="alt-text-small text-gray">With maybe hundreds of integrations, &mu;Git will flexible enough to be at the center of your development process.</p>
+      </div>
+		</div>
+  	</div>
+</div>
+	
+	
+<script>
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+</script>
+	
+</body>
+</html>

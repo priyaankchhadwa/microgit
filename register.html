@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!-- Offline Bootstrap -->
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<script src="/js/bootstrap.min.js"></script>
+		
+		<style>
+	
+		* {
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: "Segoe UI";
+		}
+		
+		.navbar {
+			font-size: 15px;
+			line-height: 20px
+		}
+
+		ul a {
+			color: #313131;
+			text-decoration: none;
+			font-size: 20px;
+		}
+		
+		a:hover {
+				color: black;
+				text-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
+		}
+		
+		.btn-success {
+			background-image: linear-gradient(#79d858, #569e3d);
+			border-color: 1px solid #4a993e;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+			padding-top: 5px;
+			padding-bottom: 9px;
+		}
+		
+		.btn-success:hover {
+			background-image: linear-gradient(#79d858, #569e3d);
+			border-color: 1px solid #4a993e;
+		}
+		
+		.btn-success:active {
+			text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.5);
+		}
+		
+		.navbar-nav > li > a {
+			padding-top: 10px;
+			padding-bottom: 15px;
+			line-height: 25px;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		
+		.navbar-fixed-top {
+			min-height: 80px;
+		}
+		
+		@media (max-width: 900px) {
+			.navbar-nav > li > a {
+				margin: 0px;
+    			line-height: 0px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				font-size: 20px;
+			}
+			
+		}
+
+		.navbar .brand { 
+			max-height: 40px;
+			max-width: 30%; 
+			overflow: visible;
+			padding-top: 0;
+			padding-bottom: 0;
+			background-color: white;
+		}
+				
+		.bar1, .bar2, .bar3 {
+			width: 30px;
+			height: 3px;
+			background-color: black;
+			margin: 5px 0;
+			transition: 0.5s;
+		}
+		
+		.change .bar1 {
+			-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+			transform: rotate(-50deg) translate(-8px,3px) ;
+		}
+
+		.change .bar2 {opacity: 0; transition: 0.2s}
+
+		.change .bar3 {
+			-webkit-transform: rotate(45deg) translate(-7px, -5px) ;
+			transform: rotate(50deg) translate(-7px, -5px) ;
+		}
+				
+		.pre-form{
+			background-image: -webkit-linear-gradient(180deg, #f5f5f5, #fff);
+    		background-image: linear-gradient(180deg, #f5f5f5, #fff);
+    		background-repeat: no-repeat;
+			background-size: 100%;
+		}
+			
+		.form-container {
+			margin-left: 100px;
+			line-height: 1.5;
+			width: 400px;
+		}
+				
+		.form-control {
+			width: 400px;
+			background-color: #f7f7f7;
+			border-color: #ddd;
+		}
+		.form-control:focus {
+			background-color: #fff;
+		}
+			
+		.form-text {
+			font-size: 12px;
+		}
+			
+		.end-note {
+			margin: 30px 0;
+			padding: 10px;
+			border-top: 1px solid #eee;
+			border-bottom: 1px solid #eee;
+		}
+		
+		.end-note a:hover {
+			text-shadow: none;
+			color: #4078c0;
+		}
+		</style>
+		
+	</head>
+	
+<body>
+	<nav class="navbar navbar-fixed-top" role="banner" style="background-color: white;">
+		<br>
+		<div class="container-fluid">
+   			<div class="navbar-header">
+   				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="myFunction(this)" style="margin-top: 0">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div> 
+				</button>
+				<a class="navbar-brand" href="home.html" style="margin-top: -25px;"><img src="logo.png" width="60"></a>
+   			</div>
+   			<div class="collapse navbar-collapse" id="myNavbar" style="margin-left: 50px;">
+				<ul class="nav navbar-nav">
+					<li><a href="terms.html">Terms</a></li>
+					<li><a href="#Security">Security</a></li>
+					<li><a href="#About">About</a></li>
+					<li><a href="contact.php">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href=login.html><span class="glyphicon glyphicon-log-in">		</span> Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<br><br><br><br>
+	<div class="container-fluid pre-form">
+		<div class="form-container">
+			<h1 style="font-weight: 400; font-size:45px;">Join &mu;Git</h1>
+			<p style="font-weight: 300; font-size:21px;">The best way to design, build, and ship software.</p><br><br>
+			<p style="font-weight: 500; font-size:21px;">Create a personal account</p><br>
+			<form autocomplete="off" method="POST"  name="registration" onsubmit="return validate()" action="home_signup.php">
+				<div class="form-group">
+					<label for="usrname">Username</label>
+					<input type="text" name="name" class="form-control" required>
+					<p class="text-muted form-text">This will be your username</p>
+				</div>
+				<div class="form-group">
+					<label for="email">Email address</label>
+					<input type="email" name="mail" class="form-control" required>
+					<p class="text-muted form-text">We'll try not to share this with anyone</p>
+				</div>
+				<div class="form-group">
+					<label for="pwd">Password</label>
+					<input type="password" name="password" class="form-control" required>
+					<p class="text-muted form-text">Use atleast 5 characters along with a special character and a numerical</p>
+				</div>
+				<p class="end-note">By clicking on "Sign me up" below you agree to our <a href="terms.html"> Terms</a> and <a href="terms.html"> Privacy Policy</a></p>
+				<input type="submit" class="btn btn-success" value="Sign me up">
+			</form>
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		function logolink()
+		{
+			var link = "login.html";
+			return link;
+		}
+	</script>
+	<script>
+		function myFunction(x) {
+			x.classList.toggle("change");
+		}
+	</script>
+	<script type="text/javascript">
+		uname = document.registration.name;
+		psw = document.registration.password;
+				
+		function namevalidate(uname, a, b)
+		{
+			if(uname.value.length < a||uname.value.length > b)
+			{
+				alert("User name should be in between "+a +"and "+b);
+				uname.focus();
+				return false;
+			}
+			else
+				return true;
+		}
+
+		function passwordvalidate(password, a, b)
+		{
+			if(psw.value.length < a||psw.value.length > b)
+			{
+				alert("Password should be in between "+a +"and "+b);
+				psw.focus();
+				return false;
+			}
+			else
+				return true;
+		}
+
+		function validate()
+		{
+			if(namevalidate(uname, 1, 20) && passwordvalidate(psw, 5, 20)) 
+			{
+				return true;
+			}
+			else
+				return false;
+		}
+	</script>
+</body>
+</html>

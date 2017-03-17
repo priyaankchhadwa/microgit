@@ -1,0 +1,106 @@
+
+public class roundrobin {
+
+	int n=5;
+	int tq=2;
+	int cpu=0;
+	int []at={0,0,1,2,3};
+	int []bt={2,4,5,6,8};
+	int []rt={2,4,5,6,8};
+	int []ct=new int[5];
+	int []wt=new int[5];
+	int []gc=new int[30];
+	
+	void sort()
+	{
+		int tmp;
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<4-i;j++)
+			{
+				if(at[j]>at[j+1])
+				{
+					tmp=at[j];
+					at[j]=at[j+1];
+					at[j+1]=tmp;
+					
+					tmp=bt[j];
+					bt[j]=bt[j+1];
+					bt[j+1]=tmp;
+					
+					tmp=rt[j];
+					rt[j]=rt[j+1];
+					rt[j+1]=tmp;
+				}
+			}
+		}
+	}
+	void calc()
+	{
+		int flag=1, tail=0, head=0;
+		
+		for(int i=0;i<n;i++)
+		{
+			if(at[i]<=cpu)
+			{
+				gc[tail]=i;
+				at[i]=999;
+				tail++;
+			}
+		}
+		
+		while(flag==1)
+		{
+			if(rt[gc[head]]<=tq)
+			{
+				cpu+=rt[gc[head]];
+				for(int i=0;i<n;i++)
+				{
+					if(at[i]<=cpu)
+					{
+						gc[tail]=i;
+						at[i]=999;
+						tail++;
+					}
+				}
+				rt[gc[head]]=0;
+				ct[gc[head]]=cpu;
+				head++;
+			}
+			else
+			{
+				cpu+=tq;
+				for(int i=0;i<n;i++)
+				{
+					if(at[i]<=cpu)
+					{
+						gc[tail]=i;
+						at[i]=999;
+						tail++;
+					}
+				}
+				rt[gc[head]]-=tq;
+				gc[tail]=gc[head];
+				head++;
+				tail++;
+			}
+			flag=0;
+			for(int j=0;j<n;j++)
+				if(rt[j]!=0)
+					flag=1;
+		}
+	}
+	
+	void display()
+	{
+		for(int i=0;i<n;i++)
+			System.out.println("\t"+bt[i]+"\t"+ct[i]);
+	}
+	public static void main(String[] args) {
+		roundrobin g  =new roundrobin();
+		g.sort();
+		g.calc();
+		g.display();
+	}
+
+}
